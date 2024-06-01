@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("12-print_sorted_dictionary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12031be1bfb1bd0c24321316a6e83ef290499052")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d07f396ac232debf227bdc516bd910429ea9e669")]
 [assembly: System.Reflection.AssemblyProductAttribute("12-print_sorted_dictionary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("12-print_sorted_dictionary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

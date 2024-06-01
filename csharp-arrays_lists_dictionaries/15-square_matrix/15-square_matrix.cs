@@ -1,16 +1,16 @@
-﻿﻿using System;
-
-class Array 
+﻿﻿﻿class Matrix
 {
-    public static int[] ReplaceElement(int[] array, int index, int n)
+    public static int[,] Square(int[,] myMatrix)
     {
-        if (index > array.Length - 1 || index < 0)
+        int [,] resultMatrix = new int[myMatrix.GetLength(0),myMatrix.GetLength(1)];
+
+        for (int i = 0; i < myMatrix.GetLength(0); i++)
         {
-            Console.WriteLine("Index out of range");
-            return array;
-        } else {
-            array[index] = n;
-            return array;
-        }
+            for (int j=0; j<myMatrix.GetLength(1); j++)
+            {
+                resultMatrix[i,j] = myMatrix[i,j] * myMatrix[i,j];
+            }
+        } 
+        return resultMatrix;
     }
 }

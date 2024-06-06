@@ -22,7 +22,7 @@ public class List
     }
 }
 
-/*class Program
+class Program
 {
     static void Main(string[] args)
     {
@@ -40,4 +40,3 @@ public class List
         count = List.SafePrint(myList, myList.Count + 2);
         Console.WriteLine("Number of integers printed: " + count);
     }
-*/

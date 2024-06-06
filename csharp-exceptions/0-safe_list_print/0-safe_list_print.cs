@@ -1,7 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class List
+
+
+class Program
+{
+
+
+    public class List
 {
     public static int SafePrint(List<int> myList, int n)
     {
@@ -22,8 +28,6 @@ public class List
     }
 }
 
-class Program
-{
     static void Main(string[] args)
     {
         List<int> myList = new List<int>() { 1, 2, 3, 4, 5 };

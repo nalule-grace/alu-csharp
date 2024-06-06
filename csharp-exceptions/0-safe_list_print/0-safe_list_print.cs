@@ -11,7 +11,7 @@
             }
             return count;
         }
-        catch(ArgumentOutOfRngeException)
+        catch(ArgumentOutOfRangeException)
         {
             return count -1;
         }

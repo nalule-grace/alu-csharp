@@ -1,4 +1,4 @@
-﻿public class Except
+﻿class Except
 {
     public static void Throw()
     {

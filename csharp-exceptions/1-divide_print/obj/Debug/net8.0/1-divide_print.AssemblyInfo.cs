@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("1-divide_print")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cc89fde180cc8a4f4da7ad6f4950341e8f8b1e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89c93dd587e11d9c962b952f76ddbfe550465461")]
 [assembly: System.Reflection.AssemblyProductAttribute("1-divide_print")]
 [assembly: System.Reflection.AssemblyTitleAttribute("1-divide_print")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

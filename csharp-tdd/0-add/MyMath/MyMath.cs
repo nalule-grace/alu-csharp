@@ -1,14 +1,14 @@
 ﻿﻿namespace MyMath;
 
     ///<summary>
-    /// public class which has all the operations
+    /// class for operations
     ///</summary>
 public class Operations
 {
     ///<summary>
-    /// Method which adds two numbers
+    /// This Method adds two numbers
     ///</summary>
-    public int Add(int a, int b) {
+    public static int Add(int a, int b) {
         return a+b;
     }
 

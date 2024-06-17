@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\2-max_int\\MyMath\\MyMath.csproj": {}
+    "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\0-add\\MyMath\\MyMath.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\2-max_int\\MyMath\\MyMath.csproj": {
+    "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\0-add\\MyMath\\MyMath.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\2-max_int\\MyMath\\MyMath.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\0-add\\MyMath\\MyMath.csproj",
         "projectName": "MyMath",
-        "projectPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\2-max_int\\MyMath\\MyMath.csproj",
+        "projectPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\0-add\\MyMath\\MyMath.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\2-max_int\\MyMath\\obj\\",
+        "outputPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-tdd\\0-add\\MyMath\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

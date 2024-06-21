@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp_inheritance\\1-instance\\1-instance.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-inheritance\\1-instance\\1-instance.csproj",
       "projectName": "1-instance",
-      "projectPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp_inheritance\\1-instance\\1-instance.csproj",
+      "projectPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-inheritance\\1-instance\\1-instance.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp_inheritance\\1-instance\\obj\\",
+      "outputPath": "C:\\Users\\HP\\CSHARP\\alu-csharp\\csharp-inheritance\\1-instance\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

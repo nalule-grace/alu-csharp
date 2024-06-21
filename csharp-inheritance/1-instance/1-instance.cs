@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Program
-{
 
     public class Obj
 {
@@ -11,6 +9,8 @@ class Program
         return obj is Array;
     }
 }
+class Program
+{
 
     static void Main(string[] args)
     {

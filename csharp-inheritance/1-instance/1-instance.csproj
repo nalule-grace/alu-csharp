@@ -7,8 +7,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-  <Compile Include="1-instance.cs"/>
-  </ItemGroup>
+
 
 </Project>

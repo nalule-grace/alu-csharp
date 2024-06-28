@@ -1,27 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-
-public class Obj{
-    public static bool IsOfTypeInt(object obj)
-    {
-        return obj is int;
-    }
-}
-class Program
-{
-    static void Main(string[] args)
-    {
-        var a = 10;
-        var b = new List<int>();
-
-        if (Obj.IsOfTypeInt(a))
-            Console.WriteLine("{0} is of type int", nameof(a));
-        else
-            Console.WriteLine("{0} is NOT of type int", nameof(a));
-
-        if (Obj.IsOfTypeInt(b))
-            Console.WriteLine("{0} is of type int", nameof(b));
-        else
-            Console.WriteLine("{0} is NOT of type int", nameof(b));
+﻿﻿/// <summary>
+/// The Obj Class
+/// </summary>
+class Obj {
+    /// <summary>
+    /// Method to check if an object is of type int
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns>True | False</returns>
+    public static bool IsOfTypeInt(object obj) {
+        if (obj is int) {
+            return true;
+        } 
+        return false;
     }
 }

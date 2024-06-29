@@ -33,31 +33,4 @@ class Rectangle : Shape
                 height = value;
         }
     }
-    public new int Area()
-    {
-        return(this.width * this.height);
-    }
-    public override string ToString()
-    {
-        return($"[Rectangle] {this.width} / {this.height}");
-    }
-}
-class Square : Rectangle
-{
-    private int size;
-    public int Size
-    {
-        get { return(size); }
-        set
-        {
-            if (value < 0)
-                throw new ArgumentException("Size must be greater than or equal to 0");
-            else
-                {
-                    size = value;
-                    Height = value;
-                    Width = value;
-                }
-        }
-    }
 }

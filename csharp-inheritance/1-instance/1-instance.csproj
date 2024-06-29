@@ -6,7 +6,7 @@
     <RootNamespace>_1_instance</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    
+    <DocumentationFile>bin/Debug/netcoreapp2.1/1-instance.xml</DocumentationFile>
   </PropertyGroup>
 
 

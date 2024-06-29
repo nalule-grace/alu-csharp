@@ -6,6 +6,7 @@
     <RootNamespace>_9_shape</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DocumentationFile>bin/Debug/netcoreapp2.1/9-shape.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

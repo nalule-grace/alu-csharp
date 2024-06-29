@@ -3,7 +3,7 @@
   <PropertyGroup>
     <DocumentationFile>bin/Debug/netcoreapp2.1/2-subclass.xml</DocumentationFile>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>_2_subclass</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

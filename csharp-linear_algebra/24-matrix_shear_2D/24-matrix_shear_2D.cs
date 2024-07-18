@@ -1,5 +1,17 @@
-﻿public class MatrixMath
+﻿
+public class MatrixMath
 {
+    /// <summary>
+    /// Applies a 2D shear transformation to a square matrix.
+    /// Shearing distorts the matrix along a specified direction (x or y) by a certain factor.
+    /// </summary>
+    /// <param name="matrix">The 2D square matrix to be sheared.</param>
+    /// <param name="direction">The direction of the shear transformation ('x' or 'y').</param>
+    /// <param name="factor">The shear factor, which determines the amount of distortion.</param>
+    /// <returns>
+    /// A new matrix representing the sheared version of the original matrix, 
+    /// or a matrix filled with -1 if the input matrix is not square or the direction is invalid.
+    /// </returns>
     public static double[,] Shear2D(double[,] matrix, char direction, double factor)
     {
         if (matrix.GetLength(0) != matrix.GetLength(1))

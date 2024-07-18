@@ -1,4 +1,7 @@
-﻿public class VectorMath
+﻿/// <summary>
+/// vector addtion
+/// </summary>
+public class VectorMath
 {
     public static double[] Add(double[] vector1, double[] vector2)
     {

@@ -1,5 +1,14 @@
-﻿public class MatrixMath
+﻿/// <summary>
+/// This class contains methods for performing operations on matrices.
+/// </summary>
+public class MatrixMath
 {
+    /// <summary>
+    /// Calculates the transpose of a matrix.
+    /// The transpose is a new matrix created by swapping the rows and columns.
+    /// </summary>
+    /// <param name="matrix">The matrix for which to find the transpose.</param>
+    /// <returns>A new matrix representing the transpose of the original matrix.</returns>
     public static double[,] Transpose(double[,] matrix)
     {
         if (matrix.Length == 0 || matrix.GetLength(0) == 0)

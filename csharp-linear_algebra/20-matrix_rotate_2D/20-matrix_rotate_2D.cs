@@ -1,5 +1,11 @@
 ﻿public class MatrixMath
 {
+    /// <summary>
+/// Rotates a 2D square matrix by a given angle in radians.
+/// </summary>
+/// <param name="matrix">The 2D square matrix to be rotated.</param>
+/// <param name="angle">The rotation angle in radians.</param>
+/// <returns>A new rotated matrix, or a matrix containing -1 if the input matrix is not square.</returns>
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
         if (matrix.GetLength(0) != matrix.GetLength(1))

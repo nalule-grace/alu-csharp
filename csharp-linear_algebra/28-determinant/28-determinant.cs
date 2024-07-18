@@ -1,5 +1,15 @@
-﻿public class MatrixMath
+﻿/// <summary>
+/// This class contains methods for performing operations on matrices.
+/// </summary>
+public class MatrixMath
 {
+    /// <summary>
+    /// Calculates the determinant of a square matrix.
+    /// </summary>
+    /// <param name="matrix">The square matrix for which to find the determinant.</param>
+    /// <returns>
+    /// The determinant of the matrix, or -1 if the matrix is not a valid 2x2 or 3x3 matrix.
+    /// </returns>
     public static double Determinant(double[,] matrix)
     {
         int dimension = matrix.GetLength(0);

@@ -1,4 +1,5 @@
-﻿/// <summary>
+﻿public class MatrixMath{
+/// <summary>
 /// Multiplies two matrices and returns the resulting product matrix.
 /// </summary>
 /// <param name="matrix1">The first matrix.</param>
@@ -35,4 +36,6 @@ public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
     }
 
     return result;
+}
+
 }

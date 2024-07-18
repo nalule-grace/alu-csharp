@@ -12,7 +12,7 @@ public class MatrixMath
     ///  - Matrix is not 2x2 dimensions.
     ///  - Matrix is not invertible (determinant is zero).
     /// </returns>
-    public static double[,] Inverse2D(double[,] matrix)
+    public static double[,] Inverse2D(double[,] matrix, double tolerance = double.Epsilon)
     {
         if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
         {
@@ -21,7 +21,7 @@ public class MatrixMath
 
         double determinant = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
 
-        if (Math.Abs(determinant) < double.Epsilon)
+        if (Math.Abs(determinant) < tolerance)
         {
         return new double[,] { { -1 } }; // Non-invertible matrix (determinant is zero)
         }

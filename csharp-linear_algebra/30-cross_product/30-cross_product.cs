@@ -3,7 +3,7 @@
 /// </summary>
 public class VectorMath
 {
-     /// <summary>
+    /// <summary>
     /// Calculates the cross product of two 3D vectors.
     /// </summary>
     /// <param name="vector1">The first 3D vector.</param>
@@ -16,13 +16,20 @@ public class VectorMath
     {
         if (vector1.Length != 3 || vector2.Length != 3)
         {
-        return new double[] { -1, -1, -1 }; // Invalid vector dimension (not 3D)
+            return new double[] { -1, -1, -1 }; // Invalid vector dimension (not 3D)
         }
+
+        const double epsilon = double.Epsilon; // Tolerance for near-zero values
 
         double x = vector1[1] * vector2[2] - vector1[2] * vector2[1];
         double y = vector1[2] * vector2[0] - vector1[0] * vector2[2];
         double z = vector1[0] * vector2[1] - vector1[1] * vector2[0];
 
-        return new double[] { x, y, z };
+        // Check if values are close enough to zero within tolerance
+        return new double[] {
+            Math.Abs(x) < epsilon ? 0 : x,
+            Math.Abs(y) < epsilon ? 0 : y,
+            Math.Abs(z) < epsilon ? 0 : z
+        };
     }
 }

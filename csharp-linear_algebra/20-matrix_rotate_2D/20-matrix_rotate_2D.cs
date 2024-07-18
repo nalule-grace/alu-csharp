@@ -1,4 +1,7 @@
-﻿public class MatrixMath
+﻿/// <summary>
+/// This class contains methods for performing operations on matrices.
+/// </summary>
+public class MatrixMath
 {
     /// <summary>
 /// Rotates a 2D square matrix by a given angle in radians.
@@ -6,7 +9,10 @@
 /// <param name="matrix">The 2D square matrix to be rotated.</param>
 /// <param name="angle">The rotation angle in radians.</param>
 /// <returns>A new rotated matrix, or a matrix containing -1 if the input matrix is not square.</returns>
-    public static double[,] Rotate2D(double[,] matrix, double angle)
+/// public static double[,] Rotate2D(double[,] matrix, double angle)
+/// A new matrix representing the rotated version of the original matrix, 
+/// or a matrix filled with -1 if the input matrix is not square.
+/// </returns>
     {
         if (matrix.GetLength(0) != matrix.GetLength(1))
         {

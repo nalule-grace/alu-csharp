@@ -1,14 +1,11 @@
 ﻿/// <summary>
 /// Multiplies two matrices and returns the resulting product matrix.
 /// </summary>
-public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
-{
-/// <summary>
-/// Multiplies two matrices and returns the resulting product matrix.
-/// </summary>
 /// <param name="matrix1">The first matrix.</param>
 /// <param name="matrix2">The second matrix.</param>
 /// <returns>The resulting product matrix, or a matrix filled with -1 if the matrices cannot be multiplied.</returns>
+public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
+{
     int m1Rows = matrix1.GetLength(0); // Number of rows in matrix1
     int m1Cols = matrix1.GetLength(1); // Number of columns in matrix1
     int m2Rows = matrix2.GetLength(0); // Number of rows in matrix2

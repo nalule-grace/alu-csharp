@@ -1,4 +1,5 @@
-﻿// <summary>
+﻿﻿
+/// <summary>
 /// This is the class responsible for matrix mathematics
 /// </summary>
 class MatrixMath

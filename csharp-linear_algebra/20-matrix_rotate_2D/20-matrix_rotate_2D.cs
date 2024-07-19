@@ -1,40 +1,47 @@
 ﻿/// <summary>
-/// This class contains methods for performing operations on matrices.
+/// This is the class responsible for matrix mathematics
 /// </summary>
-public class MatrixMath
+class MatrixMath
 {
     /// <summary>
-/// Rotates a 2D square matrix by a given angle in radians.
-/// </summary>
-/// <param name="matrix">The 2D square matrix to be rotated.</param>
-/// <param name="angle">The rotation angle in radians.</param>
-/// <returns>A new rotated matrix, or a matrix containing -1 if the input matrix is not square.</returns>
-/// public static double[,] Rotate2D(double[,] matrix, double angle)
-/// A new matrix representing the rotated version of the original matrix, 
-/// or a matrix filled with -1 if the input matrix is not square.
-/// </returns>
-    {
-        if (matrix.GetLength(0) != matrix.GetLength(1))
-        {
-        return new double[,] { { -1 } }; // Invalid matrix size (not square)
+    /// Public method to perform rotation of a matrix.
+    /// </summary>
+    /// <param name="matrix"></param>
+    /// <param name="angle"></param>
+    /// <returns></returns>
+    public static double[,] Rotate2D(double[,] matrix, double angle){
+        double cos = Math.Cos(angle);
+        double sin = Math.Sin(angle);
+        var rotation = new double[2,2]{{cos, sin}, {-sin, cos}};
+        var res = new double[matrix.GetLength(0),matrix.GetLength(1)];
+        res = Multiply(matrix, rotation);
+        return res;
+    }
+
+
+    /// <summary>
+    /// Public method to perform multiplication between two matrices.
+    /// </summary>
+    /// <param name="matrix1"></param>
+    /// <param name="matrix2"></param>
+    /// <returns></returns>
+public static double[,] Multiply(double[,] matrix1, double[,] matrix2){
+        if (matrix1.Length == 0 ||
+            matrix2.Length == 0 ||
+            matrix1.GetLength(1) != matrix2.GetLength(0)){
+            return (new double[,]{{-1}});
         }
-
-        int dimension = matrix.GetLength(0); // Assuming square matrix
-        double[,] result = new double[dimension, dimension];
-
-        // Cosine and sine of the rotation angle
-        double cosTheta = Math.Cos(angle);
-        double sinTheta = Math.Sin(angle);
-
-        for (int row = 0; row < dimension; row++)
-        {
-        for (int col = 0; col < dimension; col++)
-        {
-            // Apply rotation transformation to each element
-            result[row, col] = matrix[row, col] * cosTheta - matrix[col, row] * sinTheta;
+        var res = new double[matrix1.GetLength(0),matrix2.GetLength(1)];
+        double sum = 0.0;
+        for (int i = 0; i < matrix1.GetLength(0); i++){
+            for (int j = 0; j < matrix2.GetLength(1); j++){
+                sum = 0;
+                for (int k = 0; k < matrix1.GetLength(1); k++){
+                    sum = Math.Round(sum + (matrix1[i,k] * matrix2[k, j]), 2);
+                }
+                res[i, j] = Math.Round(sum, 2);
+            }
         }
-        }
-
-        return result;
+        return res;  
     }
 }

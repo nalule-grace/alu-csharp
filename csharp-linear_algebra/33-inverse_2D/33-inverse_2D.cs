@@ -1,37 +1,34 @@
-﻿/// <summary>
-/// This class contains methods for performing operations on matrices.
+﻿// <summary>
+/// This is the class responsible for matrix mathematics
 /// </summary>
-public class MatrixMath
+class MatrixMath
 {
     /// <summary>
-    /// Calculates the inverse of a 2D square matrix (if it exists).
+    /// Public method to perform the inverse of a 2D matrix
     /// </summary>
-    /// <param name="matrix">The 2D square matrix for which to find the inverse.</param>
-    /// <returns>
-    /// The inverse matrix, or a matrix filled with -1 if the matrix is not invertible:
-    ///  - Matrix is not 2x2 dimensions.
-    ///  - Matrix is not invertible (determinant is zero).
-    /// </returns>
+    /// <param name="matrix"></param>
+    /// <returns></returns>
     public static double[,] Inverse2D(double[,] matrix)
-    {
-        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
-        {
-        return new double[,] { { -1 } }; // Invalid matrix dimension (not 2x2)
-        }
 
+    {
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+        if (rows != 2 || cols != 2)
+        {
+            return new double[,] { { -1 } };
+        }
         double determinant = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
 
-        if (Math.Abs(determinant) < double.Epsilon)
+        if (determinant == 0)
         {
-        return new double[,] { { -1 } }; // Non-invertible matrix (determinant is zero)
+            return new double[,] { { -1 } };
         }
+        double[,] inverse = new double[2, 2];
 
-        double invDeterminant = 1.0 / determinant;
-
-        double[,] inverse = new double[,] {
-        { invDeterminant * matrix[1, 1], -invDeterminant * matrix[0, 1] },
-        { -invDeterminant * matrix[1, 0], invDeterminant * matrix[0, 0] }
-        };
+        inverse[0, 0] = Math.Round(matrix[1, 1] / determinant, 2);
+        inverse[0, 1] = Math.Round(-matrix[0, 1] / determinant, 2);
+        inverse[1, 0] = Math.Round(-matrix[1, 0] / determinant, 2);
+        inverse[1, 1] = Math.Round(matrix[0, 0] / determinant, 2);
 
         return inverse;
     }

@@ -1,41 +1,58 @@
-﻿
-public class MatrixMath
-{
-    /// <summary>
-    /// Applies a 2D shear transformation to a square matrix.
-    /// Shearing distorts the matrix along a specified direction (x or y) by a certain factor.
+﻿    /// <summary>
+    /// This is the class responsible for matrix mathematics
     /// </summary>
-    /// <param name="matrix">The 2D square matrix to be sheared.</param>
-    /// <param name="direction">The direction of the shear transformation ('x' or 'y').</param>
-    /// <param name="factor">The shear factor, which determines the amount of distortion.</param>
-    /// <returns>
-    /// A new matrix representing the sheared version of the original matrix, 
-    /// or a matrix filled with -1 if the input matrix is not square or the direction is invalid.
-    /// </returns>
-    public static double[,] Shear2D(double[,] matrix, char direction, double factor)
+    class MatrixMath
     {
-        if (matrix.GetLength(0) != matrix.GetLength(1))
-        {
-        return new double[,] { { -1 } }; // Invalid matrix size (not square)
-        }
+        /// <summary>
+        /// Public method to perform Shear of a matrix
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="direction"></param>
+        /// <param name="factor"></param>
+        /// <returns></returns>
+        public static double[,] Shear2D(double[,] matrix, char direction, double factor){
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            double[,] result = new double[rows, cols];
+            double[,] shearMatrix = new double[rows, cols];
 
-        if (direction != 'x' && direction != 'y')
-        {
-        return new double[,] { { -1 } }; // Invalid shear direction
-        }
+            if(rows != 2 || cols != 2){
+                
+                return new double[,]{ {-1}};
+            }
 
-        int dimension = matrix.GetLength(0); // Assuming square matrix
-        double[,] result = new double[dimension, dimension];
 
-        for (int row = 0; row < dimension; row++)
-        {
-        for (int col = 0; col < dimension; col++)
-        {
-            // Apply shear based on direction
-            result[row, col] = matrix[row, col] + (direction == 'x' ? factor * row : factor * col);
-        }
-        }
+            if(direction != 'x' && direction != 'y'){
+            
+                return new double[,] { { -1}};
+            }
+            
+            if(direction == 'x'){
+                
+            shearMatrix = new double[,]{ 
+                    { 1, 0},
+                    { factor, 1}
+            };
+            }
 
-        return result;
+            if(direction == 'y'){
+                shearMatrix = new double[,]{
+                    { 1, factor},
+                    { 0, 1}
+                };
+            }
+
+            for(int i = 0; i < rows; i++){
+
+                    for(int j = 0; j < cols; j++){
+                    
+                    for(int k = 0; k < 2; k++){
+                            result[i,j] += Math.Round(matrix[i, k] * shearMatrix[k, j], 2);
+                    }
+                }
+            }
+
+            return result;
+
+        }
     }
-}

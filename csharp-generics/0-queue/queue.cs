@@ -5,7 +5,7 @@
 
 public class Queue<T>
 {
-    public Type Checker()
+    public Type CheckType()
     {
         return typeof(T);
     }

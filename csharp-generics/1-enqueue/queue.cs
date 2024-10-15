@@ -1,82 +1,75 @@
-﻿public class Queue<T>
+﻿﻿/// <summary>
+/// Generic class Queue
+/// </summary>
+/// <typeparam name="T"></typeparam>
+
+public class Queue<T>
 {
     /// <summary>
-    /// Node class for the queue
+    /// Head of the Queue
+    /// </summary>
+    public Node? head;
+    /// <summary>
+    /// Tail of the Queue
+    /// </summary>
+    public Node? tail;
+    /// <summary>
+    /// Count of the Nodes
+    /// </summary>
+    public int count;
+    /// <summary>
+    /// The Node class
     /// </summary>
     public class Node
     {
         /// <summary>
-        /// Value of the node
+        /// Value of a node
         /// </summary>
-        public T Value { get; set; }
-
+        public T? value = default;
         /// <summary>
-        /// Reference to the next node in the queue
+        /// Next pointer of a node
         /// </summary>
-        public Node Next { get; set; }
-
+        public Node? next = null;
         /// <summary>
-        /// Constructor for a new node
+        /// Constructor
         /// </summary>
-        /// <param name="value">Value of the node</param>
-        public Node(T value)
-        {
-            Value = value;
+        /// <param name="v"></param>
+        public Node(T v) {
+            value = v;
+            next = null;
         }
+        
     }
-
     /// <summary>
-    /// Head of the queue
+    /// Method that returns the type of the Queue
     /// </summary>
-    private Node head;
-
-    /// <summary>
-    /// Tail of the queue
-    /// </summary>
-    private Node tail;
-
-    /// <summary>
-    /// Number of elements in the queue
-    /// </summary>
-    private int count;
-
-    /// <summary>
-    /// Method to check the type of the queue
-    /// </summary>
-    /// <returns>The type of the queue</returns>
+    /// <returns></returns>
     public Type CheckType()
     {
         return typeof(T);
     }
 
     /// <summary>
-    /// Adds an element to the end of the queue
+    /// Method that adds an item to the queue
     /// </summary>
-    /// <param name="item">Element to add</param>
-    public void Enqueue(T item)
-    {
-        Node newNode = new Node(item);
-
-        if (head == null)
-        {
+    /// <param name="value"></param>
+    public void Enqueue(T? value) {
+        Node newNode = new Node(value!);
+        if(head == null) {
             head = newNode;
             tail = newNode;
-        }
-        else
-        {
-            tail.Next = newNode;
+        }else {
+            tail!.next = newNode;
             tail = newNode;
         }
-
         count++;
     }
-
     /// <summary>
-    /// Returns the number of elements in the queue
+    /// Method to count all the nodes of a queue
     /// </summary>
-    /// <returns>Number of elements</returns>
-    public int Count()
-    {
+    /// <returns></returns>
+
+    public int Count() {
         return count;
     }
 }

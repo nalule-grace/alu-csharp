@@ -80,10 +80,21 @@ public class Queue<T>
         }
     }
     /// <summary>
+    /// A method to return the first element in th queue
+    /// </summary>
+    /// <returns></returns>
+    public T Peek() {
+        if (head ==  null) {
+            Console.WriteLine("Queue is empty");
+            return default(T)!;
+        } else {
+            return head.value!;
+        }
+    }
+    /// <summary>
     /// Method to count all the nodes of a queue
     /// </summary>
     /// <returns></returns>
-
     public int Count() {
         return count;
     }

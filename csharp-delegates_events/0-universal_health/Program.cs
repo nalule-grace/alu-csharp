@@ -1,19 +1,21 @@
-﻿/// <summary>
-/// Represents a player with a name, maximum health, and current health.
+﻿using System;
+
+/// <summary>
+/// Represents a class
 /// </summary>
 public class Player
 {
     /// <summary>
     /// The player's name.
     /// </summary>
-    public string Name { get; }
+    public string? name;
 
     /// <summary>
     /// The player's maximum health points.
     /// </summary>
-    public float MaxHp { get; }
+    public float? maxHp
 
-    private float hp;
+    private float? hp;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Player"/> class.
@@ -21,15 +23,19 @@ public class Player
     /// <param name="name">The player's name.</param>
     /// <param name="maxHp">The player's maximum health points.</param>   
 
-    public Player(string name = "Player", float maxHp = 100f)
+    public Player(string name = "Player", float? maxHp = 100f)
     {
-        Name = name;
-        MaxHp = maxHp > 0 ? maxHp : 100f;
-        if (MaxHp <= 0)
+        this.name = name;
+        //MaxHp = maxHp > 0 ? maxHp : 100f;
+        if (maxHp > 0)
         {
-            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
+            this.maxHp = maxHp;
+            
+        }else{
+        this.maxHp = 100f;
+        Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
-        hp = MaxHp;
+        hp = this.maxHp;
     }
 
     /// <summary>
@@ -37,6 +43,6 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{Name} has {hp} / {MaxHp} health");
+        Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 }

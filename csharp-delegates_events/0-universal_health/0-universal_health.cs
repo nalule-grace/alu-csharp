@@ -8,7 +8,7 @@ public class Player
     /// <summary>
     /// The player's name.
     /// </summary>
-    public string? name;
+    private string? name;
 
     /// <summary>
     /// The player's maximum health points.

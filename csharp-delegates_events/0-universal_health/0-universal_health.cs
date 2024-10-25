@@ -13,7 +13,7 @@ public class Player
     /// <summary>
     /// The player's maximum health points.
     /// </summary>
-    public float? maxHp;
+    private float? maxHp;
 
     private float? hp;
 

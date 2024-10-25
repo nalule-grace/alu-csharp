@@ -7,15 +7,15 @@ public class Player {
     /// <summary>
     /// name property
     /// </summary>
-    private string name;
+    private string? name;
     /// <summary>
     /// maxHp property
     /// </summary>
-    private float maxHp;
+    private float? maxHp;
     /// <summary>
     /// hp property
     /// </summary>
-    private float hp;
+    private float? hp;
     /// <summary>
     /// Constructor
     /// </summary>
@@ -48,8 +48,6 @@ public class Player {
         if (damage < 0) {
             Console.WriteLine($"{name} takes 0 damage!");
         } else {
-            float newHp = hp - damage;
-            ValidateHP(newHp);
             Console.WriteLine($"{name} takes {damage} damage!");
         }
         
@@ -62,24 +60,9 @@ public class Player {
         if (heal < 0) {
             Console.WriteLine($"{name} heals 0 HP!");
         }else {
-            float newHp = hp + heal;
-            ValidateHP(newHp);
             Console.WriteLine($"{name} heals {heal} HP!");
         }
 
-    }
-    /// <summary>
-    /// Method to validate HP
-    /// </summary>
-    /// <param name="newHp"></param>
-    public void ValidateHP(float newHp) {
-        if (newHp < 0) {
-            hp = 0;
-        } else if (newHp > maxHp) {
-            hp = maxHp;
-        } else {
-            hp = newHp;
-        }
     }
 
 }
